@@ -1,0 +1,18 @@
+@import 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "./variables/global";
+@import "./themes/dark";
+@import "./themes/light";
+
+
+.app {
+  font: var(--font-md);
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+
+  min-height: 100vh;
+}
+
+.secondary {
+  color: var(--secondary-color);
+}
