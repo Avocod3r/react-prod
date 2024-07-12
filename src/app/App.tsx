@@ -5,7 +5,7 @@ import {Navbar} from "widgets/Navbar";
 
 
 const App = () => {
-    const {toggleTheme, theme} = useTheme();
+    const { theme} = useTheme();
 
 
     return (
@@ -13,7 +13,6 @@ const App = () => {
             <Navbar/>
 
 
-            <button onClick={toggleTheme}>Toggle Theme</button>
             <AppRouter/>
         </div>
     );
