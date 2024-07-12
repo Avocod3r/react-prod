@@ -1,0 +1,18 @@
+{
+  "title": "Вітаю!",
+  "pages": {
+    "MainPage": {
+      "heading": "Головна сторінка"
+    },
+    "AboutPage": {
+      "heading": "Про сайт"
+    }
+  },
+  "button": {
+    "language": "Українська"
+  },
+  "navLinks": {
+    "main":"Головна",
+    "about": "Про сайт"
+  }
+}

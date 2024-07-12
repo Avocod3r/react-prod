@@ -1,9 +1,10 @@
+import {useTranslation} from "react-i18next";
+
 const AboutPage = () => {
+    const {t} = useTranslation();
     return (
         <div>
-            About Page
-
-            <span className="secondary"> HI HELLO HELLO</span>
+            {t('pages.AboutPage.heading')}
         </div>
     );
 };

@@ -1,0 +1,18 @@
+{
+  "title": "Welcome!",
+  "pages": {
+    "MainPage": {
+      "heading": "Main page"
+    },
+    "AboutPage": {
+      "heading": "About Page"
+    }
+  },
+  "button": {
+    "language": "English"
+  },
+  "navLinks": {
+    "main":"Main",
+    "about": "About"
+  }
+}
