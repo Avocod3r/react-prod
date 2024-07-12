@@ -35,15 +35,29 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
             ],
         }
 
-        const fileLoader = {
+    const fileLoader = {
         test: /\.(png|jpe?g|gif|woff2|woff)$/i,
-            use: [
-                {
-                    loader: 'file-loader',
-                }
-            ]
+        use: [
+            {
+                loader: 'file-loader',
+            }
+        ]
+    }
+
+    const babelLoader = {
+        test: /\.(js|jsx|tsx)$/,
+        exclude: /node_modules/,
+        use: {
+            loader: "babel-loader",
+            options: {
+                presets: ['@babel/preset-env'],
+                plugins: [
+                    ["i18next-extract", {locales: ['uk', 'en']}]]
+            },
+
         }
+    }
 
 
-    return [typescriptLoader, cssLoader, svgLoader, fileLoader]
+    return [ babelLoader,typescriptLoader, cssLoader, svgLoader, fileLoader]
 }
