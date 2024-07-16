@@ -1,5 +1,5 @@
-import {classNames} from "shared/lib";
-import {ButtonHTMLAttributes, FC} from "react";
+import { ButtonHTMLAttributes, FC } from 'react';
+import { classNames } from 'shared/lib';
 import classes from './Button.module.scss';
 
 export enum ButtonAppearance {
@@ -14,16 +14,20 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button: FC<ButtonProps> = ({
-                                 className,
-                                 appearance = ButtonAppearance.CLEAR,
-                                 children,
-                                 ...props
-}) => {
-    return (
-        <button className={classNames(classes.Button, {}, [className, classes[appearance]])} {...props}>
-            {children}
-        </button>
-    );
-};
+  className = '',
+  appearance = ButtonAppearance.CLEAR,
+  type = 'button',
+  children,
+  ...props
+}) => (
+  <button
+    type={type}
+    className={classNames(classes.Button, {}, [className, classes[appearance]])}
+    {...props}
+  >
+    {children}
+
+  </button>
+);
 
 export default Button;
