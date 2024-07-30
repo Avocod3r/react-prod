@@ -6,6 +6,9 @@
     },
     "AboutPage": {
       "heading": "About Page"
+    },
+    "NotFoundPage": {
+      "heading": "Page Not Found"
     }
   },
   "button": {

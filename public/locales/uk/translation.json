@@ -6,6 +6,9 @@
     },
     "AboutPage": {
       "heading": "Про сайт"
+    },
+    "NotFoundPage": {
+      "heading": "Сторінка не знайдена"
     }
   },
   "button": {
