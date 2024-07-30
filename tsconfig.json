@@ -10,7 +10,7 @@
     // Для абсолютного імпорту
     "baseUrl": ".",
     "paths": {
-      "*": ["./src/*"],
+      "*": ["./src/*"]
     },
     // Компілятор буде опрацьовувати не тільки ts a i js файли
     "allowJs": true,
@@ -26,6 +26,9 @@
     // import React from 'react';
     "allowSyntheticDefaultImports": true
   },
+  "include": [
+    "./config/jest/jest.config.ts"
+  ],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
