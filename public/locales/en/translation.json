@@ -17,5 +17,9 @@
   "navLinks": {
     "main":"Main",
     "about": "About"
+  },
+  "PageError": {
+    "heading": "An unexpected error occurred",
+    "button": "Refresh this page"
   }
 }
