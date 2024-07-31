@@ -28,7 +28,7 @@ module.exports = {
     'react/jsx-filename-extension': [2,
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
     ],
-    'max-len': [2, { code: 80, ignoreComments: true }],
+    'max-len': [2, { code: 100, ignoreComments: true }],
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
@@ -39,9 +39,10 @@ module.exports = {
     'import/no-extraneous-dependencies': 'warn',
     'no-underscore-dangle': 'off',
     'no-unused-vars': 'off',
+
     '@typescript-eslint/no-unused-vars': ['error'],
     'react/jsx-props-no-spreading': 'warn',
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid'] }],
   },
   globals: {
     __IS_DEV__: true,

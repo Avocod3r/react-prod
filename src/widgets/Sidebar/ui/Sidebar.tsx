@@ -16,8 +16,15 @@ const Sidebar = ({ className } : SidebarProps) => {
     setCollapsed((prev) => !prev);
   };
   return (
-    <div className={classNames(classes.Sidebar, { [classes.Collapsed]: collapsed }, [className])}>
-      <button onClick={toggleHandle}>
+    <div
+      data-testid="sidebar"
+      className={classNames(
+        classes.Sidebar,
+        { [classes.Collapsed]: collapsed },
+        [className],
+      )}
+    >
+      <button data-testid="sidebar-toggle" onClick={toggleHandle}>
         Toggle
       </button>
       <div className={classes.Switcher}>

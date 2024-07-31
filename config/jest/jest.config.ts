@@ -2,6 +2,7 @@
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
  */
+import path from 'path';
 
 export default {
   // All imported modules in your tests should be mocked automatically
@@ -43,14 +44,23 @@ export default {
 
   // The root directory that Jest should scan for tests and modules within
   rootDir: '../../',
+  modulePaths: [
+    '<rootDir>src/',
+  ],
 
   // The glob patterns Jest uses to detect test files
   testMatch: [
     '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
   ],
-
+  setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
+
+  // Mock CSS Modules and SVG
+  moduleNameMapper: {
+    '\\.s?css$': 'identity-obj-proxy',
+    '\\.svg': path.resolve(__dirname, 'JestEmptyComponent.tsx'),
+  },
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   // collectCoverageFrom: undefined,

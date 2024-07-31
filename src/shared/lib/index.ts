@@ -1,4 +1,4 @@
-import { useTheme } from './useTheme';
-import { classNames } from './classNames';
+import { useTheme } from './useTheme/useTheme';
+import { classNames } from './classNames/classNames';
 
 export { useTheme, classNames };
