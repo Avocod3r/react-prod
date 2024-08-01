@@ -3,6 +3,8 @@ run-name: ${{ github.actor }} is linting, testing, building  🚀
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [main]
 jobs:
   pipeline:
     strategy:
@@ -19,11 +21,15 @@ jobs:
         uses: actions/checkout@v2
       - name: Install dependencies
         run: npm install
+      - name: Build production
+        run: npm run build:prod
       - name: Run ESLint
         run: npm run lint:ts
       - name: Run Stylelint
         run: npm run lint:scss
       - name: Run unit tests
         run: npm run test:unit
-      - name: Build production
-        run: npm run build:prod
+      - name: Build storybook
+        run: npm run storybook:build
+      - name: Run ui test
+        run: npm run test:ui:ci
