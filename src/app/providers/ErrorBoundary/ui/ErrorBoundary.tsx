@@ -1,7 +1,5 @@
 import React, { ErrorInfo, Suspense } from 'react';
-import { withTranslation } from 'react-i18next';
 import { PageError } from 'widgets/PageError';
-import { classNames } from 'shared/lib';
 
 interface ErrorBoundaryProps {
     children?: React.ReactNode;
@@ -19,6 +17,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 
   static getDerivedStateFromError(error: Error) {
     // Update state so the next render will show the fallback UI.
+    console.log(error);
     return { hasError: true };
   }
 

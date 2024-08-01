@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, screen } from '@testing-library/react';
 import {
   renderWithTranslation,
 } from 'shared/lib/renderWithTranslation/renderWithTranslation';

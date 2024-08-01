@@ -36,13 +36,20 @@ module.exports = {
     'react/button-has-type': 'off',
     'react/function-component-definition': 'off',
     'no-shadow': 'off',
-    'import/no-extraneous-dependencies': 'warn',
+    'import/no-extraneous-dependencies': ['off'],
     'no-underscore-dangle': 'off',
     'no-unused-vars': 'off',
-
+    'no-console': 'off',
     '@typescript-eslint/no-unused-vars': ['error'],
-    'react/jsx-props-no-spreading': 'warn',
-    'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid'] }],
+    'react/jsx-props-no-spreading': 'off',
+    'i18next/no-literal-string': [
+      'error',
+      {
+        markupOnly: true,
+        ignoreAttribute: ['data-testid', 'to'],
+      },
+    ],
+
   },
   globals: {
     __IS_DEV__: true,

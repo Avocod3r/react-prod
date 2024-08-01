@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button, ButtonAppearance } from 'shared/ui';
 
 const BugButton = () => {
@@ -14,6 +14,7 @@ const BugButton = () => {
     }
   }, [error]);
   return (
+  // eslint-disable-next-line i18next/no-literal-string
     <Button appearance={ButtonAppearance.CLEAR} onClick={handleClick}>Throw Error</Button>
   );
 };
