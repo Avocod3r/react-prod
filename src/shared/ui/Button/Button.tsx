@@ -3,9 +3,10 @@ import { classNames } from 'shared/lib';
 import classes from './Button.module.scss';
 
 export enum ButtonAppearance {
+    PRIMARY = '',
     CLEAR = 'Clear',
-    SECONDARY = 'Secondary',
-    INVERTED = 'Inverted',
+    OUTLINE = 'Outline',
+    // INVERTED = 'Inverted',
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -15,7 +16,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button: FC<ButtonProps> = ({
   className = '',
-  appearance = ButtonAppearance.CLEAR,
+  appearance = ButtonAppearance.PRIMARY,
   type = 'button',
   children,
   ...props

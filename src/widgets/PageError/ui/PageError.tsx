@@ -19,7 +19,7 @@ const PageError = ({ className } : PageErrorProps) => {
       <h3>
         {t('PageError.heading')}
       </h3>
-      <Button appearance={ButtonAppearance.SECONDARY} onClick={handleReload}>{t('PageError.button')}</Button>
+      <Button appearance={ButtonAppearance.OUTLINE} onClick={handleReload}>{t('PageError.button')}</Button>
     </div>
   );
 };

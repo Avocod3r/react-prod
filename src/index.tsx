@@ -10,11 +10,11 @@ import { ErrorBoundary } from 'app/providers/ErrorBoundary';
 
 const renderApp = (
   <BrowserRouter>
-    <ErrorBoundary>
-      <ThemeProvider>
+    <ThemeProvider>
+      <ErrorBoundary>
         <App />
-      </ThemeProvider>
-    </ErrorBoundary>
+      </ErrorBoundary>
+    </ThemeProvider>
   </BrowserRouter>
 );
 

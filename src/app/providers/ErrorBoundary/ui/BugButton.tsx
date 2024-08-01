@@ -14,7 +14,7 @@ const BugButton = () => {
     }
   }, [error]);
   return (
-    <Button appearance={ButtonAppearance.INVERTED} onClick={handleClick}>Throw Error</Button>
+    <Button appearance={ButtonAppearance.CLEAR} onClick={handleClick}>Throw Error</Button>
   );
 };
 
