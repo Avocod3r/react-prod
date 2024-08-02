@@ -12,10 +12,13 @@
     }
   },
   "button": {
-    "language": "Українська"
+    "language": {
+      "full": "Українська",
+      "short": "УКР"
+    }
   },
   "navLinks": {
-    "main":"Головна",
+    "main": "Головна",
     "about": "Про сайт"
   },
   "PageError": {

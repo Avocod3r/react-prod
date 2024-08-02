@@ -6,12 +6,21 @@ export enum ButtonAppearance {
     PRIMARY = '',
     CLEAR = 'Clear',
     OUTLINE = 'Outline',
-    // INVERTED = 'Inverted',
+    BACKGROUND = 'Background',
+    BACKGROUND_INVERTED = 'BackgroundInverted',
+}
+
+export enum ButtonSize {
+    SMALL = 'Small',
+    MEDIUM = 'Medium',
+    LARGE = 'Large',
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
-    appearance?: ButtonAppearance
+    appearance?: ButtonAppearance;
+    square?: boolean;
+    size?: ButtonSize;
 }
 
 const Button: FC<ButtonProps> = ({
@@ -19,16 +28,23 @@ const Button: FC<ButtonProps> = ({
   appearance = ButtonAppearance.PRIMARY,
   type = 'button',
   children,
+  square,
+  size = ButtonSize.SMALL,
   ...props
-}) => (
-  <button
-    type={type}
-    className={classNames(classes.Button, {}, [className, classes[appearance]])}
-    {...props}
-  >
-    {children}
+}) => {
+  const mods: Record<string, boolean> = {
+    [classes.Square]: square,
+  };
+  return (
+    <button
+      type={type}
+      className={classNames(classes.Button, mods, [className, classes[appearance], classes[size]])}
+      {...props}
+    >
+      {children}
 
-  </button>
-);
+    </button>
+  );
+};
 
 export default Button;

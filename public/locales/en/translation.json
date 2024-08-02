@@ -12,10 +12,13 @@
     }
   },
   "button": {
-    "language": "English"
+    "language": {
+      "full": "English",
+      "short": "EN"
+    }
   },
   "navLinks": {
-    "main":"Main",
+    "main": "Main",
     "about": "About"
   },
   "PageError": {

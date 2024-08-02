@@ -3,18 +3,56 @@
   width: var(--sidebar-width);
   background: var(--inverted-bg-color);
   position: relative;
+  display: flex;
+  flex-direction: column;
   transition: width 0.3s ease-out;
 }
 
-.Collapsed {
-  width: var(--sidebar-width-collapsed);
-}
-
-.Switcher {
-  position: absolute;
-  bottom: 20px;
+.Switchers {
+  margin-top: auto;
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   gap: 20px;
   width: 100%;
+}
+
+.Items {
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.Item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.Icon {
+  fill: var(--inverted-primary-color);
+}
+
+.Collapsed {
+  width: var(--sidebar-width-collapsed);
+
+  .Switchers {
+    flex-direction: column;
+  }
+
+  .Items {
+    margin-left: 0;
+    align-items: center;
+  }
+}
+
+.ToggleBtn {
+  position: absolute;
+  bottom: 60px;
+  right: -30px;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  outline: none;
 }

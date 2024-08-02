@@ -1,10 +1,13 @@
 :root {
   --font-family-main: "Montserrat", sans-serif;
-  --font-size-md: 16px;
-  --font-line-md: 24px;
+  --font-size-sm: 16px;
+  --font-line-sm: 24px;
+  --font-sm: var(--font-size-sm) / var(--font-line-sm) var(--font-family-main);
+  --font-size-md: 24px;
+  --font-line-md: 32px;
   --font-md: var(--font-size-md) / var(--font-line-md) var(--font-family-main);
-  --font-size-lg: 24px;
-  --font-line-lg: 32px;
+  --font-size-lg: 32px;
+  --font-line-lg: 40px;
   --font-lg: var(--font-size-lg) / var(--font-line-lg) var(--font-family-main);
 
   // Size
