@@ -7,11 +7,11 @@ import Sidebar from './Sidebar';
 
 describe('Sidebar', () => {
   test('renders correctly', () => {
-    componentRender(<Sidebar />);
+    componentRender(<Sidebar />, { route: '/' });
     expect(screen.getByTestId('sidebar')).toBeInTheDocument();
   });
   test('sidebar toggle correctly', () => {
-    componentRender(<Sidebar />);
+    componentRender(<Sidebar />, { route: '/' });
     expect(screen.getByTestId('sidebar')).toBeInTheDocument();
     const toggleBtn = screen.getByTestId('sidebar-toggle');
     fireEvent.click(toggleBtn);

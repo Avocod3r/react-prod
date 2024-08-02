@@ -10,7 +10,7 @@ interface ComponentRenderOptions {
 }
 
 export function componentRender(component:ReactNode, options?: ComponentRenderOptions) {
-  const { route = '/' } = options;
+  const { route } = options;
   render(
     <I18nextProvider i18n={i18nForTests}>
       <MemoryRouter initialEntries={[route]}>
