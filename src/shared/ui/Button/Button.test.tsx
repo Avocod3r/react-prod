@@ -10,6 +10,5 @@ describe('Button', () => {
   test('renders correctly with classes', () => {
     render(<Button appearance={ButtonAppearance.CLEAR}>TEST</Button>);
     expect(screen.getByText('TEST')).toHaveClass('Clear');
-    screen.debug();
   });
 });
