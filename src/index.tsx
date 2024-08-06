@@ -8,6 +8,10 @@ import 'shared/config/i18n/i18n';
 import 'app/styles/index.scss';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';
 
+const root = document.getElementById('root');
+
+if (!root) throw Error('Root container not found');
+
 const renderApp = (
   <BrowserRouter>
     <ThemeProvider>
@@ -18,4 +22,4 @@ const renderApp = (
   </BrowserRouter>
 );
 
-render(renderApp, document.getElementById('root'));
+render(renderApp, root);

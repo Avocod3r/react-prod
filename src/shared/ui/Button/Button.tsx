@@ -5,6 +5,7 @@ import classes from './Button.module.scss';
 export enum ButtonAppearance {
     PRIMARY = '',
     CLEAR = 'Clear',
+    CLEAR_INVERTED = 'ClearInverted',
     OUTLINE = 'Outline',
     BACKGROUND = 'Background',
     BACKGROUND_INVERTED = 'BackgroundInverted',

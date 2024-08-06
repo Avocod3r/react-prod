@@ -16,7 +16,7 @@ const LanguageSwitcher = ({ className, short = false } : LanguageSwitcherProps) 
 
   return (
     <Button
-      appearance={ButtonAppearance.CLEAR}
+      appearance={ButtonAppearance.CLEAR_INVERTED}
       onClick={toggleLanguage}
       className={classNames('', {}, [className])}
     >

@@ -21,6 +21,7 @@ module.exports = {
     'react',
     '@typescript-eslint',
     'i18next',
+    'react-hooks',
   ],
   rules: {
     'react/jsx-indent': [2, 2],
@@ -49,6 +50,10 @@ module.exports = {
         ignoreAttribute: ['data-testid', 'to'],
       },
     ],
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+    'react-hooks/exhaustive-deps': 'warn', // Checks effect dependencies
 
   },
   globals: {
