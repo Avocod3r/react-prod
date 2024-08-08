@@ -7,18 +7,22 @@ import 'shared/config/i18n/i18n';
 
 import 'app/styles/index.scss';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';
+import { StoreProvider } from 'app/providers/StoreProvider';
 
 const root = document.getElementById('root');
 
 if (!root) throw Error('Root container not found');
 
 const renderApp = (
+
   <BrowserRouter>
-    <ThemeProvider>
-      <ErrorBoundary>
-        <App />
-      </ErrorBoundary>
-    </ThemeProvider>
+    <StoreProvider>
+      <ThemeProvider>
+        <ErrorBoundary>
+          <App />
+        </ErrorBoundary>
+      </ThemeProvider>
+    </StoreProvider>
   </BrowserRouter>
 );
 

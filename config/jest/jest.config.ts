@@ -5,14 +5,10 @@
 import path from 'path';
 
 export default {
-  // All imported modules in your tests should be mocked automatically
-  // automock: false,
-
-  // Stop running tests after `n` failures
-  // bail: 0,
-
-  // The directory where Jest should store its cached dependency information
-  // cacheDirectory: "/private/var/folders/60/c6g99pt96nq28bkvl8jbznhh0000gn/T/jest_dx",
+  // A set of global variables that need to be available in all test environments
+  globals: {
+    __IS_DEV__: true,
+  },
 
   // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,
@@ -53,14 +49,24 @@ export default {
     '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
   ],
   setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
-  // Indicates whether the coverage information should be collected while executing the test
-  // collectCoverage: false,
 
   // Mock CSS Modules and SVG
   moduleNameMapper: {
     '\\.s?css$': 'identity-obj-proxy',
     '\\.svg': path.resolve(__dirname, 'JestEmptyComponent.tsx'),
   },
+
+  // All imported modules in your tests should be mocked automatically
+  // automock: false,
+
+  // Stop running tests after `n` failures
+  // bail: 0,
+
+  // The directory where Jest should store its cached dependency information
+  // cacheDirectory: "/private/var/folders/60/c6g99pt96nq28bkvl8jbznhh0000gn/T/jest_dx",
+
+  // Indicates whether the coverage information should be collected while executing the test
+  // collectCoverage: false,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   // collectCoverageFrom: undefined,
@@ -101,9 +107,6 @@ export default {
 
   // A path to a module which exports an async function that is triggered once after all test suites
   // globalTeardown: undefined,
-
-  // A set of global variables that need to be available in all test environments
-  // globals: {},
 
   // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
   // maxWorkers: "50%",
