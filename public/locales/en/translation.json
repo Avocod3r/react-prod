@@ -25,5 +25,10 @@
   "PageError": {
     "heading": "An unexpected error occurred",
     "button": "Refresh this page"
+  },
+  "loginForm": {
+    "button": "Login",
+    "usernameInput": "Username",
+    "passwordInput": "Password"
   }
 }

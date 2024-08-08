@@ -9,14 +9,16 @@ interface ModalProps {
     className?: string;
     isOpen?: boolean;
     onClose?: () => void;
+    lazy?: boolean
 }
 
 const ANIMATION_DELAY = 300;
 
 const Modal: FC<ModalProps> = ({
-  className, children, isOpen, onClose,
+  className, children, isOpen, onClose, lazy,
 }) => {
   const [isClosing, setIsClosing] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout>>(null);
 
   const closeHandler = useCallback(() => {
@@ -50,6 +52,12 @@ const Modal: FC<ModalProps> = ({
     };
   }, [isOpen, closeHandler]);
 
+  useEffect(() => {
+    if (isOpen) {
+      setIsMounted(true);
+    }
+  }, [isOpen]);
+
   const contentClickHandler = (event: MouseEvent<HTMLDivElement>) => {
     event.stopPropagation();
   };
@@ -58,6 +66,10 @@ const Modal: FC<ModalProps> = ({
     [classes.Opened]: isOpen,
     [classes.IsClosing]: isClosing,
   };
+
+  if (lazy && !isMounted) {
+    return null;
+  }
 
   return (
     <Portal>

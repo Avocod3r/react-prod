@@ -1,12 +1,23 @@
 import { useTranslation } from 'react-i18next';
 import { BugButton } from 'app/providers/ErrorBoundary';
+import { Input } from 'shared/ui';
+import { useState } from 'react';
 
 const MainPage = () => {
   const { t } = useTranslation();
+  const [value, setValue] = useState('');
+
+  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    setValue(e.currentTarget.value);
+  };
+
   return (
-    <div>
-      <BugButton />
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
       {t('pages.MainPage.heading')}
+      <div style={{ border: '1px solid red' }}>
+        <BugButton />
+      </div>
+      <Input onChange={onChangeHandler} value={value} />
     </div>
   );
 };

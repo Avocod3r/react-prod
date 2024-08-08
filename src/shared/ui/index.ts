@@ -3,6 +3,7 @@ import AppLink, { AppLinkAppearance } from './AppLink/AppLink';
 import Button, { ButtonAppearance } from './Button/Button';
 import Modal from './Modal/Modal';
 import Portal from './Portal/Portal';
+import Input from './Input/Input';
 
 export {
   Theme,
@@ -14,4 +15,5 @@ export {
   ButtonAppearance,
   Modal,
   Portal,
+  Input,
 };

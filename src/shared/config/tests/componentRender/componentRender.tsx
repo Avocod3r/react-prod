@@ -8,7 +8,7 @@ import { StoreProvider, StoreSchema } from 'app/providers/StoreProvider';
 
 interface ComponentRenderOptions {
   route: string;
-  initialStore?: DeepPartial<StoreSchema>
+  initialStore?: StoreSchema
 
 }
 

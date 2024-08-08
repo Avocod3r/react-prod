@@ -25,5 +25,10 @@
   "PageError": {
     "heading": "Виникла непередбачувана помилка",
     "button": "Оновити сторінку"
+  },
+  "loginForm": {
+    "button": "Увійти",
+    "usernameInput": "Юзернейм",
+    "passwordInput": "Пароль"
   }
 }
