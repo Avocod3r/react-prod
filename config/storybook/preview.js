@@ -5,6 +5,7 @@ import { RouterDecorator } from '../../src/shared/config/storybook/RouterDecorat
 import { Theme } from '../../src/shared/ui';
 
 export const parameters = {
+  layout: 'centered',
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {

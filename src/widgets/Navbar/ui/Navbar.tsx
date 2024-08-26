@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import { classNames } from 'shared/lib';
-import { Button, ButtonAppearance, Modal } from 'shared/ui';
+import { Button, ButtonAppearance } from 'shared/ui';
 import { useTranslation } from 'react-i18next';
 import { LoginModal } from 'features/AuthByUsername';
 import classes from './Navbar.module.scss';

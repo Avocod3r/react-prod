@@ -24,7 +24,12 @@ const Input = memo(({
 
   return (
     <div className={classNames(classes.InputWrapper, {}, [wrapperClassName])}>
-      <input ref={inputRef} className={classNames(classes.Input, {}, [className])} type={type} {...props} />
+      <input
+        ref={inputRef}
+        className={classNames(classes.Input, {}, [className])}
+        type={type}
+        {...props}
+      />
       <span className={classes.FocusBorder} />
     </div>
   );
