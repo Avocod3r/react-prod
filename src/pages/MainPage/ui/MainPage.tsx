@@ -1,13 +1,13 @@
+import { ChangeEvent, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BugButton } from 'app/providers/ErrorBoundary';
 import { Input } from 'shared/ui';
-import { useState } from 'react';
 
 const MainPage = () => {
   const { t } = useTranslation();
   const [value, setValue] = useState('');
 
-  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const onChangeHandler = (e: ChangeEvent<HTMLInputElement>): void => {
     setValue(e.currentTarget.value);
   };
 

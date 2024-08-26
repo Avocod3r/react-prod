@@ -20,7 +20,7 @@ const Input = memo(({
         inputRef.current.focus();
       }
     }
-  }, []);
+  }, [autoFocus]);
 
   return (
     <div className={classNames(classes.InputWrapper, {}, [wrapperClassName])}>
