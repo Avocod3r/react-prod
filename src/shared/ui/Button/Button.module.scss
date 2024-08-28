@@ -3,7 +3,6 @@
   padding: 6px 15px;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
-  background-color: var(--bg-color);
 }
 
 .Clear,
@@ -61,4 +60,8 @@
 
 .Large {
   font: var(--font-lg);
+}
+
+.Disabled {
+  opacity: 0.5;
 }

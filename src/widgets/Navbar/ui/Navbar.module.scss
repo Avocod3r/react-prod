@@ -1,16 +1,9 @@
 .Navbar {
-  width: 100%;
+  width: 100vw;
   height: var(--navbar-height);
   background: var(--inverted-bg-color);
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding: 20px;
-}
-
-.Links {
-  margin-left: auto;
-  display: flex;
-  gap: 10px;
-  justify-content: flex-end;
 }

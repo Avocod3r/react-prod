@@ -1,6 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { AppLinkAppearance, Theme } from 'shared/ui';
+import { AppLinkAppearance } from 'shared/ui';
 import AppLink from './AppLink';
 
 export default {
@@ -34,24 +33,3 @@ Inverted.args = {
   children: 'App Link',
   appearance: AppLinkAppearance.INVERTED,
 };
-
-export const PrimaryDark = Template.bind({});
-PrimaryDark.args = {
-  children: 'App Link',
-  appearance: AppLinkAppearance.PRIMARY,
-};
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const SecondaryDark = Template.bind({});
-SecondaryDark.args = {
-  children: 'App Link',
-  appearance: AppLinkAppearance.SECONDARY,
-};
-SecondaryDark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const InvertedDark = Template.bind({});
-InvertedDark.args = {
-  children: 'App Link',
-  appearance: AppLinkAppearance.INVERTED,
-};
-InvertedDark.decorators = [ThemeDecorator(Theme.DARK)];

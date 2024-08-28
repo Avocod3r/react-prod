@@ -1,13 +1,11 @@
-import { Story } from '@storybook/react';
-import { Theme } from 'shared/ui';
-import { ThemeProvider } from 'app/providers/ThemeProvider';
+import { Story, StoryContext } from '@storybook/react';
+import { StoryThemeProvider } from 'app/providers/ThemeProvider';
+import ThemeBlock from 'shared/config/storybook/ThemeDecorator/ThemeBlock';
 
-export const ThemeDecorator = (theme: Theme) => (StoryComponent: Story) => (
-  <ThemeProvider initialTheme={theme}>
-    <body className={theme}>
-      <div className="app">
-        <StoryComponent />
-      </div>
-    </body>
-  </ThemeProvider>
+export const ThemeDecorator = (story:() => Story, { globals: { theme } }: StoryContext) => (
+  <StoryThemeProvider theme={theme}>
+    <ThemeBlock fill>
+      {story()}
+    </ThemeBlock>
+  </StoryThemeProvider>
 );

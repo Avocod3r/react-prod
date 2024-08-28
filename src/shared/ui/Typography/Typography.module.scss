@@ -1,0 +1,24 @@
+.Typography {
+  display: flex;
+  flex-direction: column;
+}
+
+.Title {
+  font: var(--font-md);
+  color: var(--primary-color);
+}
+
+.Text {
+  font: var(--font-sm);
+  color: var(--secondary-color);
+}
+
+.Error {
+  .Title {
+    color: var(--red-light);
+  }
+
+  .Text {
+    color: var(--red-dark);
+  }
+}

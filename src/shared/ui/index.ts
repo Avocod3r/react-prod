@@ -1,3 +1,4 @@
+import Typography, { TypographyAppearance } from 'shared/ui/Typography/Typography';
 import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from './theme/ThemeContext';
 import AppLink, { AppLinkAppearance } from './AppLink/AppLink';
 import Button, { ButtonAppearance } from './Button/Button';
@@ -13,6 +14,8 @@ export {
   AppLinkAppearance,
   Button,
   ButtonAppearance,
+  Typography,
+  TypographyAppearance,
   Modal,
   Portal,
   Input,

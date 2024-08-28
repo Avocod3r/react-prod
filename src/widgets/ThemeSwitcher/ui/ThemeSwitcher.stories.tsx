@@ -1,6 +1,4 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from 'shared/ui';
 import ThemeSwitcher from './ThemeSwitcher';
 
 export default {
@@ -14,9 +12,5 @@ export default {
 
 const Template: ComponentStory<typeof ThemeSwitcher> = (args) => <ThemeSwitcher {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {};
-
-export const PrimaryDark = Template.bind({});
-PrimaryDark.args = {};
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
+export const ThemeSwitcherStory = Template.bind({});
+ThemeSwitcherStory.args = {};

@@ -16,7 +16,8 @@
       "full": "English",
       "short": "EN"
     },
-    "login": "Login"
+    "login": "Login",
+    "logout": "Logout"
   },
   "navLinks": {
     "main": "Main",
@@ -27,6 +28,8 @@
     "button": "Refresh this page"
   },
   "loginForm": {
+    "title": "Login Form",
+    "error": "Invalid username or password",
     "button": "Login",
     "usernameInput": "Username",
     "passwordInput": "Password"

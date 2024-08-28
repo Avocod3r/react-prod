@@ -1,0 +1,24 @@
+.ThemeBlock {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  bottom: 0;
+  overflow: auto;
+  padding: 1rem;
+  background-color: var(--bg-color);
+  width: 50vw;
+  right: 0;
+  left: 50vw;
+  border: none;
+}
+
+.Fill {
+  left: 0;
+  width: 100vw;
+}
+
+.Left {
+  left: 0;
+  right: 50vw;
+  border: 1px solid #202020;
+}
