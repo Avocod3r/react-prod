@@ -1,8 +1,8 @@
 import { Story } from '@storybook/react';
-import { StoreProvider, StoreSchema } from 'app/providers/StoreProvider';
+import { StoreProvider, StateSchema } from 'app/providers/StoreProvider';
 import { DeepPartial } from '@reduxjs/toolkit';
 
-export const StoreDecorator = (state: DeepPartial<StoreSchema>) => (StoryComponent: Story) => (
+export const StoreDecorator = (state: DeepPartial<StateSchema>) => (StoryComponent: Story) => (
   <StoreProvider initialStore={state}>
     <StoryComponent />
   </StoreProvider>

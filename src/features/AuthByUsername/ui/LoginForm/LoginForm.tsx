@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib';
+import { classNames, useReducerManager, ReducersList } from 'shared/lib';
 import { useTranslation } from 'react-i18next';
 import {
   Typography,
@@ -8,9 +8,16 @@ import {
   TypographyAppearance,
 } from 'shared/ui';
 import { useDispatch, useSelector } from 'react-redux';
-import { ChangeEvent, memo, useCallback } from 'react';
-import { loginActions } from '../../model/slice/loginSlice';
-import { getLoginState } from '../../model/selectors/getLoginState';
+import {
+  ChangeEvent, memo, useCallback,
+} from 'react';
+import { loginActions, loginReducer } from '../../model/slice/loginSlice';
+import {
+  getLoginStateError,
+  getLoginStateLoading,
+  getLoginStatePassword,
+  getLoginStateUsername,
+} from '../../model/selectors/getLoginState';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import classes from './LoginForm.module.scss';
 
@@ -18,12 +25,22 @@ interface LoginFormProps {
     className?: string;
 }
 
+const reducers: ReducersList = {
+  login: loginReducer,
+};
+
 const LoginForm = memo(({ className } : LoginFormProps) => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
-  const {
-    username, password, isLoading, error,
-  } = useSelector(getLoginState);
+  const username = useSelector(getLoginStateUsername);
+  const password = useSelector(getLoginStatePassword);
+  const isLoading = useSelector(getLoginStateLoading);
+  const error = useSelector(getLoginStateError);
+
+  useReducerManager({
+    reducers,
+    removeAfterUnmount: true,
+  });
 
   const handleUsernameChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     dispatch(loginActions.setUsername(event.currentTarget.value));
